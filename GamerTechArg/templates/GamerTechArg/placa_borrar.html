@@ -1,0 +1,13 @@
+{% extends "GamerTechArg/inicio.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<h1>Borrar Placa De Video</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    Estas Seguro Que Deseas Borrar La Placa De Video {{placasdevideo.marca}} - Modelo {{placasdevideo.modelo}} ??
+    <input type="submit" value="Eliminar">
+</form>
+{% endblock contenidoQueCambia  %}

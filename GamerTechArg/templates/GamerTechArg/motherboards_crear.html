@@ -1,0 +1,15 @@
+{% extends "GamerTechArg/inicio.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Crear MotherBoard</h1>
+
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Crear">
+</form>
+{% endblock contenidoQueCambia  %}

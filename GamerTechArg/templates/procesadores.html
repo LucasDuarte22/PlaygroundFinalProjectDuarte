@@ -1,0 +1,19 @@
+{% extends "GamerTechArg/inicio.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+{% if miFormulario.errors %}
+<p style="color: red">Estan mal los datos, revisar</p>
+{% endif %}
+<form action="" method="post">
+{% csrf_token %}
+<!-- Aca esta la magia de Django-->
+<table>
+    {{miFormulario.as_table}}
+</table>
+<input type="submit" value="Enviar">
+</form>
+
+{% endblock contenidoQueCambia %}

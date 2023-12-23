@@ -1,0 +1,27 @@
+{% extends "GamerTechArg/inicio.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <h1>Formulario - Editar Perfil</h1>
+    <h1>De {{usuario}}</h1>
+    
+
+    <form action="" method="POST">{% csrf_token %}
+
+        
+        <table>
+
+            {{ miFormulario }}
+
+        </table>
+
+        <input type="submit", value="Enviar">
+
+    </form>  
+        <button type='button'>
+            <a class="navbar-brand" href="{% url 'CambiarContraseña' %}">Cambiar Contraseña</a>
+        </button>
+{% endblock %}

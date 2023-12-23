@@ -1,0 +1,26 @@
+{% extends "GamerTechArg/inicio.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Listado de Motherboards</h1>
+
+
+<a href="{% url 'NuevaMother' %}">Nueva MotherBoard</a>
+{% for mother_boards in motherboards %}
+    <li>Modelo: {{mother_boards.modelo}}
+        <p>
+            <a href="{% url 'DetalleMother' mother_boards.pk %}">Ver</a>
+            |
+            <a href="{% url 'EditarMother' mother_boards.pk %}">Editar</a>
+            |
+            <a href="{% url 'BorrarMother' mother_boards.pk %}">Borrar</a>
+
+
+        </p>
+    </li>
+
+
+{% endfor %}
+{% endblock contenidoQueCambia  %}

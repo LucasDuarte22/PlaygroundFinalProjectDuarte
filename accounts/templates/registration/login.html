@@ -1,0 +1,16 @@
+{% extends "GamerTechArg/index.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h1>Iniciar Sesion</h1>
+    <br>
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-dark ">Iniciar Sesion</button>
+        </form>
+    </div>
+{% endblock contenidoQueCambia%}

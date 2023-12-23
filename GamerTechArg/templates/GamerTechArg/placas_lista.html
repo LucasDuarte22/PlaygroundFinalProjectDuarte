@@ -1,0 +1,26 @@
+{% extends "GamerTechArg/inicio.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Listado de Placas De Video</h1>
+
+
+<a href="{% url 'NuevaPlaca' %}">Nueva Placa De Video</a>
+{% for placas in placasdevideo %}
+    <li>Modelo: {{placas.modelo}}
+        <p>
+            <a href="{% url 'DetallePlaca' placas.pk %}">Ver</a>
+            |
+            <a href="{% url 'EditarPlaca' placas.pk %}">Editar</a>
+            |
+            <a href="{% url 'BorrarPlaca' placas.pk %}">Borrar</a>
+
+
+        </p>
+    </li>
+
+
+{% endfor %}
+{% endblock contenidoQueCambia  %}

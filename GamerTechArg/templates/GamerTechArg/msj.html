@@ -1,0 +1,13 @@
+{% extends "GamerTechArg/inicio.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    {% if mensaje %}
+        <p>
+            {{mensaje}}
+        </p>
+    {% endif %}
+
+{% endblock contenidoQueCambia  %}
